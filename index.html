@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
     <head>
         <meta charset="UTF-8">
         <meta name="author" content="knox">
         <title>Knox's Survey of Everything</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,700;1,400;1,700&family=Langar&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="main.css">
         <link rel="icon" href="images/icosahedron.svg">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,17 +13,17 @@
     </head>
     <body>
         <header>
-            <h1 id="title">Knox's Survey of Everything</h1>
-            <p id="description">A Survey to Help Connect Players and Dungeon Masters with Similar Gameplay Styles</p>
+            <h1 id="title" class="txt-ctr f-lg">Knox's Survey of Everything</h1>
+            <p id="description" class="txt-ctr f-md mar-t-0">A Survey to Help Connect Players and Dungeon Masters with Similar Gameplay Styles</p>
         </header>
         <main>
-            <form id="survey-form">
+            <form id="survey-form" class="flex form mar-2">
                 <!--character info section-->
-                <fieldset>
+                <fieldset class="flex outer-field">
                     <legend>Let's start with the fun stuff! Tell us about your ideal character:</legend>
                     <!--class selector-->
                     <label for="dropdown">Which class would your character be?</label>
-                    <select name="class" id="dropdown">
+                    <select name="class" id="dropdown" class="mar-b-1">
                         <option value="" disabled selected>--Please choose an class--</option>
                         <optgroup label="Player's Handbook">
                             <option value="barbarian">Barbarian</option>
@@ -40,16 +42,16 @@
                         <optgroup label="Tasha's Cauldron of Everything">
                             <option value="artificer">Artificer</option>
                         </optgroup>
-                        <optgroup label="Other"><
+                        <optgroup label="Other">
                             <option value="bloodhunter">Bloodhunter</option>
                             <option value="gunslinger">Gunslinger</option>
-                            <option value="homebrew">Homebrew, multiclass, or something else - tell us more at the end!</option>
+                            <option value="homebrew">Something else</option>
                         </optgroup>
                     </select>
                     <!--end of class selector-->
                     <!--race selector-->
                     <label for="race">What about their race?</label>
-                    <select name="race" id="race">
+                    <select name="race" id="race" class="mar-b-1">
                         <option value="" disabled selected>--Please choose an race--</option>
                         <optgroup label="Player's Handbook">
                             <option value="dragonborn">Dragonborn</option>
@@ -121,79 +123,95 @@
                             <option value="grung">Grung</option>
                         </optgroup>
                         <optgroup label="Other">
-                            <option value="other">Homebrew or something else - tell us more at the end!</option>
+                            <option value="other">Something Else</option>
                         </optgroup>
                     </select>
                     <!--end of race selector-->
+                    <!--background-->
                     <label for="background">Finally, let us know your preferred background. Check out <a href="https://www.dndbeyond.com/backgrounds?filter-name=">D&D Beyond</a> for some ideas.</label>
-                    <input type="text" id="background" name="background">
+                    <input type="text" id="background" name="background" placeholder="Acolyte">
                 </fieldset>
                 <!--gameplay preferences-->
-                <fieldset>
+                <fieldset class="flex outer-field">
                     <legend>Next, let's talk about your gameplay preferences:</legend>
                     <!--play style-->
-                    <fieldset>
+                    <fieldset class="flex inner-field">
                         <legend>What's your favorite play style(s)? Pick as many as you like!</legend>
+                        <label for="roleplay">
                         <input type="checkbox" id="roleplay" name="style" value="roleplay">
-                        <label for="roleplay">Roleplay Heavy</label>
+                        Roleplay Heavy</label>
+                        <label for="minmax">
                         <input type="checkbox" id="minmax" name="style" value="minmax">
-                        <label for="minmax">Minmax/Munchkin</label>
+                        Minmax/Munchkin</label>
+                        <label for="combat">
                         <input type="checkbox" name="style" id="combat" value="combat">
-                        <label for="combat">Combat Centric</label>
+                        Combat Centric</label>
+                        <label for="puzzle">
                         <input type="checkbox" name="style" id="puzzle" value="puzzle">
-                        <label for="puzzle">Puzzle Focused</label>
+                        Puzzle Focused</label>
+                        <label for="other-style">
                         <input type="checkbox" name="style" id="other-style" value="other">
-                        <label for="other-style">Something else - tell use more at the end!</label>
+                        Something else - tell use more at the end!</label>
                     </fieldset>
                     <!--setting preference-->
-                    <fieldset>
+                    <fieldset class="flex inner-field">
                         <legend>Pick your favorite setting:</legend>
+                        <label for="faerun">
                         <input type="radio" name="setting" id="faerun" value="faerun">
-                        <label for="fareun">Faerûn/Forgotten Realms</label>
+                        Faerûn/Forgotten Realms</label>
+                        <label for="avernus">
                         <input type="radio" name="setting" id="avernus" value="avernus">
-                        <label for="avernus">Avernus</label>
+                        Avernus</label>
+                        <label for="eberron">
                         <input type="radio" name="setting" id="eberron" value="eberron">
-                        <label for="eberron">Eberron</label>
+                        Eberron</label>
+                        <label for="greyhawk">
                         <input type="radio" name="setting" id="greyhawk" value="greyhawk">
-                        <label for="greyhawk">Greyhawk</label>
+                        Greyhawk</label>
+                        <label for="ravenloft">
                         <input type="radio" name="setting" id="ravenloft" value="ravenloft">
-                        <label for="ravenloft">Ravenloft</label>
+                        Ravenloft</label>
+                        <label for="ravnica">
                         <input type="radio" name="setting" id="ravnica" value="ravnica">
-                        <label for="ravnica">Ravnica</label>
+                        Ravnica</label>
+                        <label for="theros">
                         <input type="radio" name="setting" id="theros" value="theros">
-                        <label for="theros">Theros</label>
+                        Theros</label>
+                        <label for="wildemount">
                         <input type="radio" name="setting" id="wildemount" value="wildemount">
-                        <label for="wildemount">Wildemount</label>
+                        Wildemount</label>
+                        <label for="other-setting">
                         <input type="radio" name="setting" id="other-setting" value="other">
-                        <label for="other-setting">Something else - tell us more at the end!</label>
+                        Something else</label>
                     </fieldset>
                     <!--timing preference-->
                     <label for="timing">How often would you be willing to commit to playing?</label>
                     <select name="timing" id="timing">
+                        <option value="" disabled selected>--Please choose an option--</option>
                         <option value="often">More than once a week</option>
                         <option value="weekly">Once a week</option>
                         <option value="biweekly">Once every two weeks</option>
                         <option value="monthly">Once a month</option>
-                        <option value="other">Something else - tell us more at the end!</option>
+                        <option value="other">Something else</option>
                     </select>
                 </fieldset>
                 <!--personal info section-->
-                <fieldset>
+                <fieldset class="flex outer-field">
                     <legend>Finally, tell us a bit about you & how to contact you:</legend>
                     <label for="name" id="name-label">What should we call you?</label>
-                    <input type="text" autocomplete="name" id="name" name="user" required placeholder="Gary G.">
+                    <input type="text" autocomplete="name" id="name" name="user" required placeholder="Gary G." class="mar-b-1">
                     <label for="email" id="email-label">What email should we use to connect you with your matches?</label>
-                    <input type="email" autocomplete="email" id="email" name="email" required placeholder="gary.g@dungeonmaster.com">
+                    <input type="email" autocomplete="email" id="email" name="email" required placeholder="gary.g@dungeonmaster.com" class="mar-b-1">
                     <label for="number" id="number-label"><small>(Optional)</small> How old are you?</label>
                     <input type="number" name="age" id="number" placeholder="18+" min="18" max="120">
                 </fieldset>
-                <label for="comments">Anything else we should know before we match you with a group? Remember, if you chose "something else" in any of the above options, please expand on that now!</label>
-                <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Prefer a homebrew race, class, or setting? Let us know here!"></textarea>
+                <label for="comments" class="comments-label">Anything else we should know before we match you with a group? If you chose "something else" in any of the above options, please expand on that now!</label>
+                <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Prefer a homebrew race, class, or setting? Let us know here!" class="comments"></textarea>
                 <button type="submit" id="submit">Submit</button>
             </form>
         </main>
         <footer>
-            <p><small>Icons made by <a href="https://icon54.com/">Pixel perfect</a> from <a href="https://www.flaticon.com/">www.flaticon.com</a></small></p>
+            <p class="txt-ctr"><small class="f-sm">Icons made by <a href="https://icon54.com/">Pixel perfect</a> from <a href="https://www.flaticon.com/">www.flaticon.com</a></small></p>
         </footer>
     </body>
 </html>
